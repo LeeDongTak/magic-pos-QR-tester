@@ -1,0 +1,18 @@
+.order-check-list-content-list {
+  width: 100%;
+  height: calc(68.9% - 5rem);
+  overflow-y: scroll;
+}
+
+.order-check-list-content-list::-webkit-scrollbar {
+  width: 0.5rem;
+}
+.order-check-list-content-list::-webkit-scrollbar-thumb {
+  background: var(--point-50);
+}
+.order-check-list-content-list::-webkit-scrollbar-track {
+  background: none;
+}
+.inView {
+  height: 2rem;
+}

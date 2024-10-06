@@ -1,0 +1,54 @@
+.store-info {
+    display: flex;
+    padding: 1.5rem 2rem;
+    align-items: center;
+    gap: 8.2rem;
+    justify-content: flex-end;
+    border-bottom: 0.1rem solid var(--bg-line);
+    background: var(--white);
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.order-type {
+    display: flex;
+    padding: 0.6rem 1rem;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 1rem;
+
+    color: var(--point1-80);
+    text-align: center;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.5rem; /* 100% */
+    letter-spacing: -0.03rem;
+
+    border-radius: 0.5rem;
+    background: var(--bg-p);
+}
+
+.store-name {
+    color: var(--text2);
+    text-align: center;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5rem; /* 100% */
+    letter-spacing: -0.03rem;
+}
+
+.amount {
+    color: var(--point1-80);
+    text-align: center;
+    font-size: 1.7rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.7rem; /* 100% */
+    letter-spacing: -0.034rem;
+}

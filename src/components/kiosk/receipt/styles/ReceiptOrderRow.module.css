@@ -1,0 +1,72 @@
+.container {
+    position: relative;
+    display: flex;
+    width: 33.5rem;
+    padding: 2rem 1rem;
+    align-items: flex-start;
+    gap: 1.5rem;
+    border-bottom: 0.1rem solid var(--bg-line);
+}
+
+.container img{
+    width: 10rem;
+    height: 10rem;
+    flex-shrink: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.3rem;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.info h2 {
+    color: var(--text1);
+    text-align: center;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.6rem; /* 100% */
+    letter-spacing: -0.032rem;
+}
+
+.product-name {
+    color: var(--text1);
+    font-family: Pretendard, sans-serif;
+    font-size: 1.4rem  /* 14/10 */;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.product-option {
+    color: var(--text2);
+    font-family: Pretendard, sans-serif;
+    font-size: 1.2rem  /* 12/10 */;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.2rem  /* 12/10 */; /* 100% */
+}
+
+.product-price {
+    color: var(--text1, #121416);
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.4rem; /* 100% */
+    letter-spacing: -0.028rem;
+}
+
+.product-ea {
+    position: absolute;
+    bottom: 2rem  /* 20/10 */;
+    right: 10%;
+}

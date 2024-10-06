@@ -1,0 +1,87 @@
+.swiper {
+  position: relative;
+  --swiper-background-left: linear-gradient(-90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+  --swiper-background-right: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+  --swiper-postion-left: 0;
+  --swiper-postion-right: 0;
+}
+
+.swiper:before,
+.swiper:after {
+  content: '';
+  height: 100%;
+  width: 0;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  transition: all 0.3s;
+}
+
+.swiper:before {
+  background: var(--swiper-background-left);
+  left: var(--swiper-postion-left);
+}
+
+.swiper:after {
+  background: var(--swiper-background-right);
+  right: var(--swiper-postion-right);
+}
+
+.swiper.before:before,
+.swiper.after:after {
+  width: 4rem;
+}
+
+.swiper.before:before {
+  background: var(--swiper-background-left);
+  left: var(--swiper-postion-left);
+}
+
+.swiper.after:after {
+  background: var(--swiper-background-right);
+  right: var(--swiper-postion-right);
+}
+
+.slide {
+  width: auto !important;
+  height: 5.6rem !important;
+  padding: 1.9rem 1.5rem;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.8rem;
+  letter-spacing: -0.036rem;
+  cursor: pointer;
+  border-radius: 1rem;
+  background: var(--bg-g, #f7f7f7);
+  color: var(--text1);
+}
+.slide:hover {
+  background: var(--bg-p);
+}
+.slide p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.slide.active {
+  background-color: var(--point1-80);
+  color: var(--text5);
+}
+
+.slide button {
+  width: 100%;
+  height: 100%;
+}
+
+.drag-info {
+  position: absolute;
+  top: -2.5rem;
+  font-size: 1.4rem;
+  color: var(--text3);
+  right: 0;
+}

@@ -1,0 +1,80 @@
+.container {
+    display: flex;
+    padding: 2rem 1rem;
+    align-items: flex-start;
+    gap: 1.5rem;
+    border-bottom: 0.1rem solid var(--bg-line);
+}
+
+.menu-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.menu-name-option {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.3rem;
+}
+
+.menu-name-option > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.menu-name-option h2 {
+    color: var(--text1);
+    text-align: center;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.6rem; /* 100% */
+    letter-spacing: -0.032rem;
+}
+
+.menu-name-option p {
+    color: var(--text2);
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2rem; /* 153.846% */
+    letter-spacing: -0.026rem;
+}
+
+.menu-name-option span {
+    color: var(--text1);
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.4rem; /* 100% */
+    letter-spacing: -0.028rem;
+}
+
+.menu-name-option + div {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+
+.menu-name button {
+    background: var(--main-color);
+    padding: 0.5rem  /* 5/10 */ 1rem  /* 10/10 */ 0.5rem  /* 5/10 */ 1rem  /* 10/10 */;
+    color: var(--text5);
+    border-radius: 1rem  /* 10/10 */;
+    margin: 0 1rem  /* 10/10 */ 0 1rem  /* 10/10 */;
+    cursor: pointer;
+}
+
+.quantity {
+    display: inline-block;
+    text-align: center;
+    width: 1rem  /* 10/10 */;
+    margin: 0;
+}

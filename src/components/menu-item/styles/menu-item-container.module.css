@@ -1,0 +1,57 @@
+.wrap {
+  position: relative;
+  height: 100%;
+}
+
+.wrap.empty {
+  position: relative;
+  height: calc(100vh - 40%);
+}
+
+.wrap .menu-container {
+  height: 100%;
+}
+
+.wrap.empty .menu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrap.empty .menu-container > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  height: 70%;
+}
+.wrap.empty .menu-container > div h4 {
+  color: var(--text1, #121416);
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2rem; /* 100% */
+  letter-spacing: -0.04rem;
+}
+.wrap.empty .menu-container > div button {
+  display: flex;
+  width: 22.5rem;
+  height: 5.6rem;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 0.5rem;
+  background: var(--point1-80, #7433ff);
+  box-shadow: 0 0 1rem 0 rgba(68, 9, 194, 0.1);
+  color: var(--white, #fff);
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2.56rem;
+  letter-spacing: -0.032rem;
+  cursor: pointer;
+  margin-top: 3rem;
+}

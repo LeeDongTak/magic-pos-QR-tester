@@ -1,0 +1,29 @@
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button {
+  display: flex;
+  padding: 1.5rem 4rem;
+  align-items: flex-start;
+  gap: 1rem;
+  width: auto;
+  border-radius: 0.5rem;
+  background: var(--point1-80, #7433ff);
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.button p {
+  color: var(--white, #fff);
+  text-align: center;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.8rem; /* 100% */
+  letter-spacing: -0.036rem;
+}

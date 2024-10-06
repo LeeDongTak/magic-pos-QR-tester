@@ -1,0 +1,9 @@
+.container {
+    margin-top: 5.06rem;
+    display: inline-flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.9375rem;
+    width: 100%;
+    padding: 0 1.25rem;
+}

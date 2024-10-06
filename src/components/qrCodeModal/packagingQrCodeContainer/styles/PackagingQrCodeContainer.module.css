@@ -1,0 +1,15 @@
+.packaging-qr-code-container {
+  width: 100%;
+  height: auto;
+  min-width: 50rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.packaging-qr-code-item-box {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}

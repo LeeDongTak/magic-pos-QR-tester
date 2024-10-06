@@ -1,0 +1,31 @@
+.order-check-list-title {
+  width: 100%;
+  height: auto;
+  display: flex;
+  border: 1px solid #ededed;
+  background: var(--bg-g);
+}
+.order-check-list-title > div {
+  height: 100%;
+  display: flex;
+  font-size: 1.8rem;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  letter-spacing: -0.36px;
+  padding: 2rem 0;
+  margin-right: 3rem;
+}
+div.title-number {
+  width: 9.868421052631579%;
+  margin-left: 2rem;
+}
+div.title-time {
+  width: 19.736842105263158%;
+}
+div.title-content {
+  width: 51.973684210526315%;
+}
+div.title-status {
+  width: 9.210526315789473%;
+}

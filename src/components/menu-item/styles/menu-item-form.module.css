@@ -1,0 +1,301 @@
+.wrap {
+  --input-border: transparent;
+  --input-border-radius: 1rem;
+  --input-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  --input-padding: 2rem;
+  --input-border-focus: 1px solid var(--point50);
+  --input-placeholder-color: var(--text3);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  display: flex;
+  gap: 3rem;
+  flex-direction: column;
+}
+.wrap input::-webkit-inner-spin-button {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+.wrap .input-name {
+  color: var(--text1, #121416);
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6rem; /* 100% */
+  letter-spacing: -0.032rem;
+}
+.wrap .input {
+  border: var(--input-border);
+  border-radius: var(--input-border-radius);
+  box-shadow: var(--input-box-shadow);
+  padding: var(--input-padding);
+  height: 5.4rem;
+}
+.wrap .input:focus {
+  border: var(--input-border-focus);
+  outline: none;
+}
+.wrap .input::placeholder {
+  color: var(--input-placeholder-color);
+}
+.wrap .img-txt-wrap {
+  display: flex;
+  gap: 1rem;
+}
+.wrap .img-wrap {
+  width: 12.3rem;
+  height: 12.3rem;
+  position: relative;
+  background-color: var(--bg-g);
+}
+.wrap .img-wrap .default-text {
+  color: var(--text2);
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 2rem;
+  letter-spacing: -0.024rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.wrap .img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.wrap .img-wrap label {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  cursor: pointer;
+}
+.wrap .img-wrap input {
+  width: 0;
+  height: 0;
+  border: 0;
+  position: fixed;
+}
+.wrap .img-wrap .edit-img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: var(--bg-p);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.wrap .img-wrap:hover .edit-img {
+  opacity: 1;
+}
+.wrap .img-wrap .remove-img-button {
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+  width: 3rem;
+  height: 3rem;
+  z-index: 2;
+  background-color: var(--text3);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.wrap .img-wrap.active .remove-img-button {
+  z-index: 2;
+  opacity: 1;
+}
+.wrap .img-wrap .remove-img-button path {
+  stroke: #fff;
+}
+.wrap .txt-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.wrap .txt-wrap .input-wrap {
+  gap: 1.5rem 3rem;
+  display: flex;
+  flex: 1;
+}
+
+.wrap .txt-wrap .input-wrap > p {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+.wrap .txt-wrap .input-wrap.top > p:first-child input {
+  width: 12.6rem;
+}
+.wrap .txt-wrap .input-wrap.top > p:last-child input {
+  width: 10rem;
+}
+.wrap .txt-wrap .input-wrap > p label {
+  width: 6rem;
+}
+.wrap .txt-wrap .input-wrap > p input {
+  flex: 1;
+}
+.wrap .checkbox-wrap {
+  display: flex;
+  align-items: center;
+}
+.wrap .checkbox-wrap p {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid var(--point1-80);
+  background-color: #fff;
+  margin-left: 2.1rem;
+}
+.wrap .checkbox-wrap p label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrap .checkbox-wrap p label.active {
+  background-color: var(--point1-80);
+}
+.wrap .checkbox-wrap p label svg path {
+  fill: #fff;
+}
+.wrap .checkbox-wrap p input {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.wrap .checkbox-wrap .checkbox-info {
+  margin-left: 1rem;
+  color: var(--text3, #bfbfbf);
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.4rem; /* 100% */
+  letter-spacing: -0.028rem;
+  cursor: pointer;
+}
+.wrap .line-wrap {
+  width: 100%;
+  height: 1px;
+  background: #ededed;
+}
+/* 옵션 설정 부분 */
+.option-container {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+.option-container .option-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+}
+.option-container .option-wrap button {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background: var(--bg-g, #f7f7f7);
+  color: var(--text2, #5c5c5c);
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.4rem; /* 100% */
+  letter-spacing: -0.028rem;
+  position: relative;
+}
+
+.wrap .btn-wrap {
+  display: flex;
+  gap: 1rem;
+  padding: 0 2.5rem;
+}
+.wrap .btn-wrap button {
+  border-radius: 1rem;
+  height: 5.6rem;
+  cursor: pointer;
+  flex: 1;
+}
+.wrap .btn-wrap button.update-btn {
+  background-color: var(--point1-80);
+  color: var(--text5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrap .btn-wrap button.delete-btn {
+  background-color: var(--text4);
+  color: var(--text5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrap .btn-wrap button.basic-btn {
+  background-color: var(--bg-g);
+}
+
+/* 메뉴 옵션 미니 버튼들 */
+
+.mini-plus-btn {
+  cursor: pointer;
+}
+.mini-edit-btn {
+  width: 2.9rem;
+  height: 2.9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--bg-p);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+.mini-remove-btn {
+  position: absolute;
+  top: -0.7rem;
+  right: -0.7rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--text3);
+  cursor: pointer;
+}
+.mini-remove-btn path {
+  stroke: #fff;
+}
+.option-wrap button span {
+  display: none;
+}
+.option-wrap button:hover span {
+  display: flex;
+}

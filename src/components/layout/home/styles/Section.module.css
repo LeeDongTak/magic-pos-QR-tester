@@ -1,0 +1,257 @@
+/* 키오스크 */
+.kiosk-box {
+  width: 100%;
+  margin-top: 40rem;
+  display: flex;
+  height: 3088px;
+  flex-direction: row;
+  justify-content: center;
+}
+.sticky-box {
+  padding: 5%;
+  top: 5rem;
+  gap: 20rem;
+  height: 100vh;
+  display: flex;
+  position: sticky;
+}
+.iphone-box {
+  display: flex;
+  align-items: center;
+  filter: drop-shadow(rgba(47, 47, 47, 0.34) 0px 28px 40px);
+}
+.iphone-img {
+  width: auto;
+  height: 100%;
+}
+.title-box {
+  gap: 7rem;
+  width: 60em;
+  height: 45rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-direction: column;
+}
+/* 키오스크 @media-query */
+@media screen and (max-height: 965px) {
+  .sticky-box {
+    top: -1rem;
+  }
+  .title-box {
+    height: 45rem;
+  }
+  .iphone-box img {
+    height: 70rem;
+  }
+}
+@media screen and (max-height: 770px) {
+  .sticky-box {
+    top: -3rem;
+  }
+  .title-box {
+    height: 35rem;
+  }
+  .iphone-box img {
+    height: 55rem;
+  }
+}
+@media screen and (max-height: 690px) {
+  .sticky-box {
+    top: -5rem;
+  }
+  .title-box {
+    height: 30rem;
+  }
+  .iphone-box img {
+    height: 45rem;
+  }
+}
+
+/* 메인 제목 */
+.title-box .t1 {
+  background: linear-gradient(to right, var(--main-color), #ffa800);
+  font-size: 7rem;
+  font-weight: 700;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+/* 설명 */
+.sub-title {
+  gap: 1rem;
+  display: flex;
+  font-size: 2.5rem;
+  flex-direction: column;
+}
+
+/* 매출 분석 */
+.sales-shot-box {
+  gap: 3rem;
+  width: 100%;
+  padding: 5rem;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+.sales-shot-box .image-section {
+  width: 90rem;
+  display: flex;
+  justify-content: center;
+}
+.image-container {
+  gap: 2rem;
+  display: flex;
+  padding: 4rem;
+  border-radius: 6rem;
+  flex-direction: column;
+  background: var(--bg-g);
+}
+.image-container h1 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+.image-container .desc {
+  gap: 0.5rem;
+  display: flex;
+  font-weight: 300;
+  font-size: 1.6rem;
+  padding-bottom: 1rem;
+  flex-direction: column;
+}
+.sales-shot-box img {
+  height: 53rem;
+  max-width: 100%;
+  border-radius: 2rem;
+}
+.empty {
+  padding-top: 20rem;
+}
+@media (max-width: 1880px) {
+  .image-section {
+    width: 70rem;
+  }
+  .sales-shot-box img {
+    height: 33rem;
+    max-width: 100%;
+    border-radius: 2rem;
+  }
+}
+/* PC , 테블릿 가로 (해상도 768px ~ 1023px)*/
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .image-section {
+    width: 70rem;
+  }
+  .sales-shot-box img {
+    height: 33rem;
+    max-width: 100%;
+    border-radius: 2rem;
+  }
+}
+/* 테블릿 세로 (해상도 768px ~ 1023px)*/
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .image-section {
+    width: 70rem;
+  }
+  .sales-shot-box img {
+    height: 33rem;
+    max-width: 100%;
+    border-radius: 2rem;
+  }
+}
+
+/* swiper */
+.admin-field {
+  gap: 3rem;
+  width: 100%;
+  display: flex;
+  padding: 2rem;
+  margin-top: 0;
+  flex-direction: row;
+  background: var(--bg-g);
+}
+.wrapper {
+  width: 70%;
+  display: flex;
+}
+.images {
+  width: 100%;
+  height: auto;
+}
+.info {
+  gap: 1rem;
+  height: 100%;
+  display: flex;
+  padding-bottom: 1rem;
+  flex-direction: column;
+}
+.info-id {
+  font-size: 7rem;
+  font-weight: 100;
+  color: var(--main-color);
+}
+.info-text {
+  gap: 1rem;
+  display: flex;
+  padding-top: 2rem;
+  flex-direction: column;
+}
+.info-title {
+  padding-top: 3rem;
+  font-size: 5rem;
+  font-weight: 300;
+}
+.info p {
+  font-size: 2rem;
+  font-weight: 300;
+}
+/* swiper description */
+.description {
+  gap: 1rem;
+  width: 30%;
+  display: flex;
+  position: relative;
+  padding-bottom: 4rem;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.description-item {
+  gap: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+.description h1 {
+  font-size: 8rem;
+  font-weight: 100;
+  line-height: 8rem;
+  color: var(--main-color);
+}
+.description h2 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+.text-box {
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.text-box p {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+/* swiper button */
+.action-button {
+  top: 0;
+  right: 0;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  z-index: var(--level-5-z-index);
+}
+
+.action-button .arrow {
+  cursor: pointer;
+  color: var(--main-color);
+}

@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.qr-reader {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 30rem;
+}
+
+.container video {
+    height: 30rem;
+    width: fit-content;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}

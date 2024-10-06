@@ -1,0 +1,135 @@
+.order-list-item {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 1rem;
+  color: var(--text1);
+  transition: all 0.2s;
+  margin-bottom: 5%;
+  border: 0.1rem solid var(--line);
+}
+
+.order-list-item > div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+}
+
+.order-number {
+  color: var(--text1);
+  text-align: center;
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2.2rem; /* 100% */
+  letter-spacing: -0.044rem;
+}
+
+.order-time {
+  color: var(--text2);
+  text-align: center;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5rem; /* 100% */
+  letter-spacing: -0.03rem;
+}
+
+div.item-title {
+  justify-content: space-between;
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin: 2rem 0;
+  letter-spacing: -0.044rem;
+}
+
+.menu-list {
+  width: 80%;
+  height: auto;
+  transition: all 0.2s;
+  border-radius: 1rem;
+}
+
+.menu-list-item {
+  width: 100%;
+  height: auto;
+  transition: all 0.2s;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  border-radius: 0.8rem;
+  background: var(--bg-g);
+  margin-bottom: 1rem;
+}
+.menu-name {
+  color: var(--text1);
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160%; /* 2.56rem */
+  letter-spacing: -0.032rem;
+}
+.menu-name > span {
+  margin-right: .5rem;
+}
+
+.menu-name span:last-child {
+  color: var(--point1-80);
+  text-align: center;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.5rem; /* 100% */
+  letter-spacing: -0.03rem;
+}
+
+.item-image {
+  border-radius: 5rem;
+}
+.menu-option {
+  color: var(--text2, #5C5C5C);
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.4rem; /* 100% */
+  letter-spacing: -0.028rem;
+}
+
+.menu-option > span {
+  margin-right: 0.5rem;
+}
+
+.menu-button-box {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+.menu-button-box > div {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.menu-button-box > button {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: var(--point1-80);
+  font-size: 1.6rem;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+  gap: 1rem;
+  box-shadow: 0rem 0rem 1rem 0rem rgba(68, 9, 194, 0.25);
+}
