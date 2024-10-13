@@ -6,6 +6,7 @@ import JSZip from 'jszip';
 export const QRDownloadAll = async (qrData: QRdataType[]) => {
   if (qrData) {
     try {
+      console.time();
       const zip = new JSZip();
       const qrCodeImg = qrData.map(async qrCode => {
         const file = await domtoimage.toBlob(qrCode.qrRef);
@@ -16,6 +17,7 @@ export const QRDownloadAll = async (qrData: QRdataType[]) => {
           saveAs(content, 'QRCode');
         });
       });
+      console.timeEnd();
     } catch (error) {
       console.error(error);
     }

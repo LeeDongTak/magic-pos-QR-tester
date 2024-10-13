@@ -1,8 +1,6 @@
-import useFetchTableInQRCode from '@/hooks/query/qr-code/useFetchTableInQRCode';
 import useCustomModalHide from '@/hooks/service/common/useCustomModalHide';
-import useAuthState from '@/shared/store/session';
 import clsx from 'clsx';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import QrCodeButtonBox from './QrCodeButtonBox';
 import QrCodeTabButton from './QrCodeTabButton';
 import PackagingQrCodeContainer from './packagingQrCodeContainer/PackagingQrCodeContainer';
@@ -13,21 +11,16 @@ import CloseButton from '/public/icons/x.svg';
 type QrCodeModalProps = 'shop' | 'packaging' | null;
 
 const QrCodeModal = ({ modalId }: { modalId?: string }) => {
-  const { session } = useAuthState();
-  const userId = session?.user.id;
-  const { data } = useFetchTableInQRCode(userId!);
+  const data = {
+    use_table: true,
+    store_table: Array.from(Array(500), (_, i) => i + 1),
+  };
   const { clickModalCloseHandler } = useCustomModalHide();
-  const [selectedComponent, setSelectedComponent] = useState<QrCodeModalProps>(
-    data?.[0]?.use_table ? 'shop' : 'packaging',
-  );
+  const [selectedComponent, setSelectedComponent] = useState<QrCodeModalProps>(data.use_table ? 'shop' : 'packaging');
   const clickComponentHandler = (component: 'shop' | 'packaging') => {
     if (component === selectedComponent) return;
     setSelectedComponent(prevComponent => (prevComponent === component ? null : component));
   };
-
-  useEffect(() => {
-    return () => {};
-  }, []);
 
   return (
     <div className={styles.qrCodeModalBox}>
@@ -44,13 +37,13 @@ const QrCodeModal = ({ modalId }: { modalId?: string }) => {
       </div>
 
       {/* QR코드 텝매뉴 */}
-      {data?.[0]?.use_table && (
+      {data.use_table && (
         <QrCodeTabButton selectedComponent={selectedComponent} clickComponentHandler={clickComponentHandler} />
       )}
 
       {/* QR코드 컨테이너 */}
       <div className={styles.qrCodeShowBox}>
-        {data?.[0]?.use_table && (
+        {data.use_table && (
           <div className={clsx(styles.qrCodeContainer, selectedComponent === 'shop' && styles.show)}>
             <ShopQrCodeContainer data={data} />
           </div>
