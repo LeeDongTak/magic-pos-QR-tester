@@ -4,11 +4,10 @@ import clsx from 'clsx';
 import { QRCodeSVG } from 'qrcode.react';
 import { useEffect, useRef } from 'react';
 import { IoPrintOutline } from 'react-icons/io5';
-import { ContainerPropsType } from '../shopQrCodeContainer/ShopQrCodeContainer';
 import styles from './styles/QrCodeListitem.module.css';
 
 interface propsType {
-  storeTable?: ContainerPropsType;
+  storeTable?: number;
   orderType: string;
 }
 
@@ -38,7 +37,7 @@ const QrCodeListItem = ({ storeTable, orderType }: propsType) => {
       }}
     >
       <div className={clsx(styles['qr-code'], isQrClick && styles['active'], !storeTable && styles['order-type-togo'])}>
-        {storeTable && <div className={styles['table-number']}>{storeTable.position}번 테이블</div>}
+        {storeTable && <div className={styles['table-number']}>{storeTable}번 테이블</div>}
         <div
           className={clsx(
             styles['qr-print-icon'],
