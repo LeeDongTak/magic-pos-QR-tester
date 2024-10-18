@@ -31,7 +31,7 @@
   align-items: center;
 }
 
-.close-button{
+.close-button {
   cursor: pointer;
 }
 
@@ -44,7 +44,7 @@
   justify-content: center;
 }
 
-.qr-code-container{
+.qr-code-container {
   width: 100%;
   height: 0;
   opacity: 0;
@@ -52,14 +52,12 @@
   transition: 0.5s;
   transform: scaleY(0);
 }
-.qr-code-container.show{
+.qr-code-container.show {
   opacity: 100%;
   visibility: visible;
   height: auto;
   transform: scaleY(1);
 }
-
-
 
 .qr-code-move-button {
   cursor: pointer;
@@ -86,6 +84,7 @@
   height: auto;
   padding-bottom: 5rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
@@ -100,7 +99,7 @@
   font-size: 1.6rem;
   color: #fff;
 }
-.qr-button{
+.qr-button {
   padding-top: 1.3rem;
   padding-bottom: 1.3rem;
 }
