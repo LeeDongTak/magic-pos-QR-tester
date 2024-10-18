@@ -1,24 +1,73 @@
-import useQRDownLoadHandler from '@/hooks/service/qr-code/useQRDownLoadHandler';
+import {
+  QRDownloadAllCustomFeatureFor,
+  QRDownloadAllCustomFeaturePromiseAll,
+  QRDownloadAllDomToImageFor,
+  QRDownloadAllDomToImagePromiseAll,
+  QRDownloadAllHtml2CanvasFor,
+  QRDownloadAllHtml2CanvasPromiseAll,
+} from '@/server/api/supabase/qrCodeDownLoad';
 import useQRCodeStore from '@/shared/store/qrCode';
-import Image from 'next/image';
 import Button from '../common/Button';
 import styles from './styles/QrCodeModal.module.css';
-import loading from '/public/images/loadingSpinner.gif';
 
 const QrCodeButtonBox = () => {
   const { qrData } = useQRCodeStore();
-  const { clickAllQrDownLoadHandler, AllIsPending } = useQRDownLoadHandler();
 
   return (
     <div className={styles.qrCodeButtonBox}>
       <Button
         type="button"
-        className={AllIsPending ? styles.qrButton : ''}
+        className={styles.qrButton}
         onClick={() => {
-          clickAllQrDownLoadHandler(qrData);
+          QRDownloadAllHtml2CanvasPromiseAll(qrData);
         }}
       >
-        {AllIsPending ? <Image src={loading} alt="" width={32} height={32} /> : <span>전체 다운로드</span>}
+        <span>html2canvas + promiseAll</span>
+      </Button>
+      <Button
+        type="button"
+        className={styles.qrButton}
+        onClick={() => {
+          QRDownloadAllHtml2CanvasFor(qrData);
+        }}
+      >
+        <span>html2canvas + for</span>
+      </Button>
+      <Button
+        type="button"
+        className={styles.qrButton}
+        onClick={() => {
+          QRDownloadAllDomToImagePromiseAll(qrData);
+        }}
+      >
+        <span>domtoimage + promiseAll</span>
+      </Button>
+      <Button
+        type="button"
+        className={styles.qrButton}
+        onClick={() => {
+          QRDownloadAllDomToImageFor(qrData);
+        }}
+      >
+        <span>domtoimage + for</span>
+      </Button>
+      <Button
+        type="button"
+        className={styles.qrButton}
+        onClick={() => {
+          QRDownloadAllCustomFeaturePromiseAll(qrData);
+        }}
+      >
+        <span>customFeature + promiseAll</span>
+      </Button>
+      <Button
+        type="button"
+        className={styles.qrButton}
+        onClick={() => {
+          QRDownloadAllCustomFeatureFor(qrData);
+        }}
+      >
+        <span>customFeature + for</span>
       </Button>
     </div>
   );
