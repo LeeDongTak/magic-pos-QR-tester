@@ -15,6 +15,7 @@ const QrCodeModal = ({ modalId }: { modalId?: string }) => {
     use_table: true,
     store_table: Array.from(Array(50), (_, i) => i + 1),
   };
+
   const { clickModalCloseHandler } = useCustomModalHide();
   const [selectedComponent, setSelectedComponent] = useState<QrCodeModalProps>(data.use_table ? 'shop' : 'packaging');
   const clickComponentHandler = (component: 'shop' | 'packaging') => {

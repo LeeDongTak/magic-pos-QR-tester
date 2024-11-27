@@ -21,7 +21,7 @@ interface NavList {
 const SidebarList = ({ navList, clickFn }: NavList) => {
   const storeId = useAuthState(state => state.storeId);
   const { storeInfo } = useFetchQuery({ storeId: storeId ?? '' });
-  const isUseTable = storeInfo?.use_table;
+  const isUseTable = true;
   const [filteredNavList, setFilteredNavList] = useState(navList);
   const router = useRouter();
   const currentPath = router.asPath;
