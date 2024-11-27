@@ -1,9 +1,7 @@
-import { QUERY_KEY } from '@/hooks/query/qr-code/useFetchTableInQRCode';
 import useQRDownLoadHandler from '@/hooks/service/qr-code/useQRDownLoadHandler';
 import useQRCodeStore from '@/shared/store/qrCode';
 import useAuthState from '@/shared/store/session';
-import { StoreTableInQRCode, Tables } from '@/types/supabase';
-import { useQueryClient } from '@tanstack/react-query';
+import { Tables } from '@/types/supabase';
 import clsx from 'clsx';
 import { QRCodeSVG } from 'qrcode.react';
 import { useEffect, useRef } from 'react';
@@ -16,13 +14,11 @@ interface propsType {
 }
 
 const QrCodeListItem = ({ storeTable, orderType }: propsType) => {
-  const queryClient = useQueryClient();
-  const data = queryClient.getQueryData<StoreTableInQRCode[]>([QUERY_KEY.QR_CODE]);
   const { storeId } = useAuthState();
-  const tableCount = data && data[0].store_table.length;
   const { clickOneQrDownLoadHandler, isQrClick } = useQRDownLoadHandler();
   const QRImage = useRef<HTMLDivElement[]>([]);
   const { setQrData, qrData } = useQRCodeStore();
+
   // qr code url
   const qrUrl = storeTable
     ? `${process.env.NEXT_PUBLIC_SUPACE_REDIRECT_TO}/kiosk/${storeId}?tableId=${storeTable.id}`
@@ -30,9 +26,13 @@ const QrCodeListItem = ({ storeTable, orderType }: propsType) => {
   console.log(qrData);
   useEffect(() => {
     setQrData({
-      qrRef: QRImage.current[0],
+      qrRef: {
+        id: orderType,
+        content: QRImage.current[0],
+      },
       orderType,
     });
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
