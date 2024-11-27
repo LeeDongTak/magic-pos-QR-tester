@@ -19,7 +19,7 @@ const useClickCUDHandler = () => {
   const userId = '9d814d3f-5b30-4419-a086-5991d135ecad';
   const data = queryClient.getQueryData<StoreWithStoreTable[]>([QUERY_KEY.TABLE, userId]);
   const storeData = data![0];
-  const storeId = storeData.id;
+  const storeId = '01e86751-d99d-4109-928c-c1da4cacb06f';
   const tablePosition = storeData.store_table.map(table => table.position as number);
   const tableIdInOrderStore = storeData.order_store.map(order => order.table_id);
   const tableData = storeData.store_table.filter(x => x.id === tableId);
