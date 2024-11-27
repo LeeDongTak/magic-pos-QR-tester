@@ -1,7 +1,10 @@
 import { create } from 'zustand';
 
 export type QRdataType = {
-  qrRef: HTMLDivElement;
+  qrRef: {
+    id: string;
+    content: HTMLDivElement;
+  };
   orderType: string;
 };
 interface QRCodeType {
@@ -13,9 +16,12 @@ interface QRCodeType {
 const useQRCodeStore = create<QRCodeType>(set => ({
   qrData: [],
   setQrData: value =>
-    set(state => ({
-      qrData: [...state.qrData, value],
-    })),
+    set(state => {
+      if (!state.qrData.some(qr => qr.qrRef.id === value.qrRef.id)) {
+        return { qrData: [...state.qrData, value] };
+      }
+      return state;
+    }),
   resetQrData: () =>
     set(() => ({
       qrData: [],
