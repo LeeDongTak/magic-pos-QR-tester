@@ -130,7 +130,7 @@ export const QRDownloadAllCustomFeaturePromiseAll = async (qrData: QRdataType[])
         const canvas = await domToCanvas(qrCode.qrRef);
         const image = canvas.toDataURL('image/png');
         return zip.file(`${qrCode.orderType}.jpg`, image.split(',')[1], { base64: true });
-      });
+      }); 
 
       await Promise.all(qrCodeImg).then(() => {
         zip

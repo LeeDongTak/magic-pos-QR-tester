@@ -1,11 +1,10 @@
 import useFetchTable from '@/hooks/query/table/useFetchTable';
-import useAuthState from '@/shared/store/session';
 import TableContainer from './TableContainer';
 import styles from './styles/Table.module.css';
 
 const Table = () => {
-  const { session } = useAuthState();
-  const { data } = useFetchTable({ userId: session?.user.id });
+  const userId = '9d814d3f-5b30-4419-a086-5991d135ecad';
+  const { data } = useFetchTable({ userId });
 
   return <div className={styles['table-wrapper']}>{data && <TableContainer storeData={data} />}</div>;
 };

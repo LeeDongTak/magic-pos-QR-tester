@@ -2,7 +2,7 @@ import { useState } from 'react';
 import AdminLayoutWrapper from './AdminLayoutWrapper';
 
 const AdminLayout = ({ children }: { children: React.ReactNode }) => {
-  const [isLoaded] = useState(false);
+  const [isLoaded] = useState(true);
 
   // useEffect(() => {
   //   if (isLoaded && !session) router.push(HOME_PATH);

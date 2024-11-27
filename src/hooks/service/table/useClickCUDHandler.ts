@@ -16,7 +16,8 @@ const useClickCUDHandler = () => {
   const { TableItemClick } = useTableStore();
   const { tableId, maxGuest, isDisabled } = useTableStore();
   const queryClient = useQueryClient();
-  const data = queryClient.getQueryData<StoreWithStoreTable[]>([QUERY_KEY.TABLE, session?.user.id]);
+  const userId = '9d814d3f-5b30-4419-a086-5991d135ecad';
+  const data = queryClient.getQueryData<StoreWithStoreTable[]>([QUERY_KEY.TABLE, userId]);
   const storeData = data![0];
   const storeId = storeData.id;
   const tablePosition = storeData.store_table.map(table => table.position as number);
