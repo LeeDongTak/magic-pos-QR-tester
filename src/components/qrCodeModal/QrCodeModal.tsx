@@ -1,8 +1,7 @@
 import useFetchTableInQRCode from '@/hooks/query/qr-code/useFetchTableInQRCode';
 import useCustomModalHide from '@/hooks/service/common/useCustomModalHide';
-import useAuthState from '@/shared/store/session';
 import clsx from 'clsx';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import QrCodeButtonBox from './QrCodeButtonBox';
 import QrCodeTabButton from './QrCodeTabButton';
 import PackagingQrCodeContainer from './packagingQrCodeContainer/PackagingQrCodeContainer';
@@ -13,7 +12,7 @@ import CloseButton from '/public/icons/x.svg';
 type QrCodeModalProps = 'shop' | 'packaging' | null;
 
 const QrCodeModal = ({ modalId }: { modalId?: string }) => {
-  const { session } = useAuthState();
+  // const { session } = useAuthState();
   const userId = '9d814d3f-5b30-4419-a086-5991d135ecad';
   const { data } = useFetchTableInQRCode(userId!);
   const { clickModalCloseHandler } = useCustomModalHide();
@@ -22,10 +21,6 @@ const QrCodeModal = ({ modalId }: { modalId?: string }) => {
     if (component === selectedComponent) return;
     setSelectedComponent(prevComponent => (prevComponent === component ? null : component));
   };
-
-  useEffect(() => {
-    console.log(data);
-  }, []);
 
   return (
     <div className={styles.qrCodeModalBox}>
